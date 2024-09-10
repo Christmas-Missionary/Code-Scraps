@@ -1,0 +1,15 @@
+test
+testing
+I don't think
+bad words
+are allowed
+on github
+find your
+own list.
+Each line
+is treated
+as
+a
+seperate
+"word".
+2 + 2 = 4
