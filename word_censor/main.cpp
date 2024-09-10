@@ -1,20 +1,4 @@
-/*
-
-Write a program called 'censor' that takes in one argument on the command line.
-This argument is the filename of a newline-separated wordlist of profanity such as
-http://urbanoalvarez.es/blog/2008/04/04/bad-words-list/ or
-http://www.bannedwordlist.com/SwearWordResources.htm
-The program should then read a text from standard in, and print it out again,
-but replacing every instance of a word in the wordlist with a 'censored' version.
-The censored version of a word has the same first character as the word,
-and the rest of the characters are replaced with '*'.
-For example, the 'censored' version of 'peter' would be 'p****'
-
-Example:
->echo 'You jerkface!' | censor badwords.txt
-You j***face!
-
-*/
+// https://old.reddit.com/r/dailyprogrammer/comments/106gse/9202012_challenge_100_intermediate_bad_word_filter/
 
 #define _LIBCPP_REMOVE_TRANSITIVE_INCLUDES
 #include <__algorithm/count_if.h>
@@ -45,17 +29,25 @@ static std::vector<std::string> get_all_bad_words(std::string const& file_path){
     return res;
 }
 
-int main(){
+std::string get_file_path(){
     std::string file_path {};
-
-    std::cout << "Please drag and drop the list you want.\n";
     std::cin >> file_path;
-    // std::cin.ignore();
+    if (file_path.at(file_path.size() - 1) == '\47'){
+        file_path.pop_back();
+    }
+    if (file_path.at(0) == '\47'){
+        file_path.erase(0, 1);
+    }
+    return file_path;
+}
 
+int main(){
+    std::cout << "Please drag and drop the list you want.\n";
+    const std::string file_path = get_file_path();
 
     censor filter = {get_all_bad_words(file_path), '*'};
     std::string full_input;
-    std::cout << "Type shit please, or type q to quit program.\n";
+    std::cout << "Type stuff please, or type q to quit program.\n";
     while (true) {
         std::getline(std::cin, full_input);
         if (full_input == "--quit"){
