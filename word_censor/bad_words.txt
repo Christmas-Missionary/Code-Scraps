@@ -3,8 +3,8 @@ testing
 I don't think
 bad words
 are allowed
-on github
-find your
+on github.
+Find your
 own list.
 Each line
 is treated
