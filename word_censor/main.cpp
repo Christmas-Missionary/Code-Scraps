@@ -31,6 +31,7 @@ static std::vector<std::string> get_all_bad_words(std::string const& file_path){
 
 std::string get_file_path(){
     std::string file_path {};
+    std::cout << "Please drag and drop the list you want.\n";
     std::cin >> file_path;
     if (file_path.at(file_path.size() - 1) == '\47'){
         file_path.pop_back();
@@ -42,8 +43,7 @@ std::string get_file_path(){
 }
 
 int main(){
-    std::cout << "Please drag and drop the list you want.\n";
-    const std::string file_path = get_file_path();
+    std::string file_path = get_file_path();
 
     censor filter = {get_all_bad_words(file_path), '*'};
     std::string full_input;
@@ -58,6 +58,13 @@ int main(){
             std::cout << "Reloaded.\n";
             continue;
         }
+        if (full_input == "--new"){
+            file_path = get_file_path();
+            filter.set_list(get_all_bad_words(file_path));
+            std::cout << "New list loaded.\n";
+            continue;
+        }
+
         if (full_input.size() >= 10 && full_input.substr(0, 9) == "--censor "){
             filter.censoring_char = full_input[9];
             std::cout << "Changed censoring char to " << filter.censoring_char << ".\n";
