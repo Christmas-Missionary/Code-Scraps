@@ -1,0 +1,1 @@
+This is a prototype for a terminal top-down shooter where you are the letter P and you shoot the Xs, where the bullets are Bs.  
