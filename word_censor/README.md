@@ -9,6 +9,7 @@ Changes the ASCII character used for censored content.
 
 --new:  
 Loads a new list.  
+
     --new  
     Please drag and drop the list you want.  
     '/the/absolute/path/to/the/list/you/want/list.txt'  
