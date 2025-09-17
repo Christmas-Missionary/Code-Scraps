@@ -2,16 +2,13 @@
 ###########  FILES  ############
 ################################
 *.pptx
-.DS_Store
-todo.txt
-todo
+CMakeUserPresets.json
 
 ################################
 ########### FOLDERS ############
 ################################
 build/
 html/
-.vscode/
 
 ################################
 ############ C/C++ #############
@@ -149,6 +146,8 @@ ipch/
 *.e2e
 
 # Other
-.cache
+.vscode
 a
-compile_commands.json
+todo
+todo.txt
+.DS_Store

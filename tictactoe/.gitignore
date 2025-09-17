@@ -2,16 +2,12 @@
 ###########  FILES  ############
 ################################
 *.pptx
-.DS_Store
-todo.txt
-todo
 
 ################################
 ########### FOLDERS ############
 ################################
 build/
 html/
-.vscode/
 
 ################################
 ############ C/C++ #############
@@ -61,8 +57,7 @@ html/
 ################################
 ########### VS CODE ############
 ################################
-.vscode/settings.json
-.vscode/c_cpp_properties.json
+.vscode/
 *.code-workspace
 .history
 
@@ -149,6 +144,15 @@ ipch/
 *.e2e
 
 # Other
-.cache
+.DS_Store
+todo.txt
+todo
+CMakeUserPresets.json
+CMakeNotes.txt
+tictactoe
+notes.txt
+s.sh
+d.sh
 a
+.cache
 compile_commands.json

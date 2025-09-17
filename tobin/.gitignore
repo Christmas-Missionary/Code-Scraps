@@ -2,16 +2,13 @@
 ###########  FILES  ############
 ################################
 *.pptx
-.DS_Store
-todo.txt
-todo
 
 ################################
 ########### FOLDERS ############
 ################################
 build/
+build-*/
 html/
-.vscode/
 
 ################################
 ############ C/C++ #############
@@ -147,8 +144,3 @@ ipch/
 
 # Visual Studio Trace Files
 *.e2e
-
-# Other
-.cache
-a
-compile_commands.json

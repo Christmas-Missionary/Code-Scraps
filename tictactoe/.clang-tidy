@@ -1,0 +1,36 @@
+Checks:
+'
+abseil-*,
+altera-*,
+  -altera-unroll-loops,
+  -altera-struct-pack-align,
+android-*,
+boost-*,
+bugprone-*,
+cert-*,
+clang-analyzer-*,
+concurrency-*,
+cppcoreguidelines-*,
+  -cppcoreguidelines-avoid-magic-numbers,
+darwin-*,
+fuchsia-*,
+google-*,
+hicpp-*,
+linuxkernel-*,
+llvm-*,
+llvmlibc-*,
+  -llvmlibc-restrict-system-libc-headers,
+misc-*,
+modernize-*,
+mpi-*,
+objc-*,
+openmp-*,
+performance-*,
+portability-*,
+readability-*,
+  -readability-magic-numbers,
+zircon-*,
+'
+CheckOptions:
+  - key:             readability-function-cognitive-complexity.IgnoreMacros
+    value:           'true'
